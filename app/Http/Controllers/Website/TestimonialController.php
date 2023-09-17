@@ -12,15 +12,9 @@ class TestimonialController extends Controller
     public function index()
     {
         $now = Carbon::now();
-        $testimonials = Testimonial::all();
+        $testimonials = Testimonial::orderBy('rating', 'desc')->get();
         return view('website.testimonial.index')->with([
             'testimonials' => $testimonials
-        ]);
-    }
-    public function show(Testimonial $testimonial)
-    {
-        return view('website.testimonial.show')->with([
-            'testimonial' => $testimonial
         ]);
     }
 }
