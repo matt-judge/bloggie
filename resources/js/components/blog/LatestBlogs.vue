@@ -30,10 +30,17 @@
         mounted() {
             this.loadBlogs();
         },
+        props: {
+            limit: {
+                type: Number,
+                default: 3
+            }
+        },
         methods: {
             loadBlogs() {
                 axios.get(
-                    '/api/blog/latest?limit=7',
+                    '/api/blog/latest?limit=3',
+                    '/api/blog/latest?limit=' + this.limit,
                 ).then(response => {
                     this.blogs = response.data;
                 }).catch(e => {
