@@ -33,6 +33,7 @@ class BlogController extends Controller
         $blogs = Blog::where(function ($subquery) use ($now) {
                 return $subquery->where('expired_at', '>', $now)->orWhereNull('expired_at');
             })
+            ->where('published_at', '<', $now)
             ->orderBy('published_at', 'asc')
             ->limit($request->get('limit', 3))
             ->get();
