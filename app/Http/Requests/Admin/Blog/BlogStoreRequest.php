@@ -37,12 +37,13 @@ class BlogStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'featured_at'   => ['nullable', 'date'],
-            'image_url'     => ['required', 'url'],
-            'main_content'  => ['required'],
-            'published_at'  => ['nullable', 'date'],
-            'slug'          => ['required', 'min:3', 'max:255', 'unique:blogs'],
-            'title'         => ['required', 'min:3', 'max:255'],
+            'featured_at'           => ['nullable', 'date'],
+            'image_url'             => ['required', 'url'],
+            'main_content'          => ['required'],
+            'additional_content'    => ['required'],
+            'published_at'          => ['nullable', 'date'],
+            'slug'                  => ['required', 'min:3', 'max:255', 'unique:blogs'],
+            'title'                 => ['required', 'min:3', 'max:255'],
         ];
     }
 }
