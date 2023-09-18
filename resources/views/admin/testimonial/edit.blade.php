@@ -90,8 +90,7 @@
                                         placeholder="Testimonial Message"
                                         required
                                         rows="5"
-                                    >{{ old('message') ?? ($testimonial->message ?? '') }}
-                                    </textarea>
+                                    >{{ old('message') ?? ($testimonial->message ?? '') }}</textarea>
                                 </div>
 
                                 <div class="form-group">

@@ -21,4 +21,6 @@
             ></testimonial-card>
         @endforeach
     </div>
+
+    <latest-blogs :limit="9"></latest-blogs>
 @endsection
