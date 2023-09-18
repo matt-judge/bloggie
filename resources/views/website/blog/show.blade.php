@@ -34,6 +34,12 @@
         <p class="py-4">
             {{ $blog->main_content }}
         </p>
+
+        @isset($blog->additional_content)
+            <p class="py-4">
+                {{ $blog->additional_content }}
+            </p>
+        @endisset
     </div>
 
     <featured-blogs></featured-blogs>
