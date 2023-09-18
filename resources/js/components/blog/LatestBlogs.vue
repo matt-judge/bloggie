@@ -40,7 +40,6 @@
             loadBlogs() {
                 axios.get(
                     '/api/blog/latest?limit=' + this.limit,
-
                 ).then(response => {
                     this.blogs = response.data;
                 }).catch(e => {

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Testimonial;
+use App\Http\Requests\Admin\Testimonial\TestimonialStoreRequest;
+use App\Http\Requests\Admin\Testimonial\TestimonialUpdateRequest;
 use Illuminate\Http\Request;
 
 class TestimonialController extends Controller
